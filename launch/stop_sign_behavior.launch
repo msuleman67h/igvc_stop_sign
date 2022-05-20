@@ -1,0 +1,5 @@
+<launch>
+    <param name="stop_sign_stopping_distance" value=5/>
+    <param name="stop_sign_config_file" value="$(find igvc_stop_sign)/stop_sign_configs/stop_signs.yaml"/>
+    <node pkg="igvc_stop_sign" type="stop_sign_behavior.py" name="stop_sign_behavior"/>
+</launch>
