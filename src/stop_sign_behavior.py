@@ -41,6 +41,7 @@ if __name__ == '__main__':
     with open(rospy.get_param("stop_sign_config_file")) as stream:
         stop_sign_config = safe_load_all(stream)
         for stop_sign in stop_sign_config:
-            stop_signs.append((stop_sign['pose']['position']['x'], stop_sign['pose']['position']['y']))
+            if stop_sign:
+                stop_signs.append((stop_sign['pose']['position']['x'], stop_sign['pose']['position']['y']))
     pub = rospy.Publisher('purepursuit/stop', Bool, queue_size=10)
     main()
