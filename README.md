@@ -12,7 +12,7 @@ catkin build
 ```  
 or 
 ```commandline  
-catkin make
+catkin_make
 ```  
   
 ## Running the package  
