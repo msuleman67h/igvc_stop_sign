@@ -10,7 +10,7 @@ def callback(data):
     global stop_start_timer
     global pub
 
-    stopping_radius = rospy.get_param("stop_sign_stopping_distance")
+    stopping_radius = int(rospy.get_param("stop_sign_stopping_distance"))
     if (abs(data.pose.position.x - stop_signs[stop_sign_index][0]) < stopping_radius) and (
             abs(data.pose.position.y - stop_signs[stop_sign_index][1]) < stopping_radius):
         stop_curr_time = rospy.get_time()
