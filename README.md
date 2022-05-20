@@ -24,3 +24,6 @@ To launch the package, simple use `roslaunch` command.
 source devel/setup.bash  
 roslaunch igvc_stop_sign stop_sign_behavior.launch   
 ```  
+
+Credit: 
+https://github.com/Aixcalibur/pure_pursuit_stop
